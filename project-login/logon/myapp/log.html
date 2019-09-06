@@ -1,0 +1,44 @@
+<html>
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel = "stylesheet"
+	href = "C:\Users\Sonu\Desktop\project-login\logon\myapp\logc.css" />
+<script>
+	function effect()
+{
+	var x=document.getElementById("l");
+	x.style.backgroundColor="green";
+
+}
+function effectback()
+{
+	var x=document.getElementById("l");
+	x.style.backgroundColor= "rgb(54, 183, 223)";
+
+}
+function validation()
+{
+	var result=true;
+	var i=document.getElementsByClassName("i");
+	if(i[0].value.length==0|| i[1].value.length==0)
+	 {   
+		 result=false;
+		alert("some field is not filled");  }
+	return result;
+}
+
+</script>
+</head>
+<body class="bd">
+	<div class="loginpage">
+	<form action="/user_l" method="post" onsubmit="return validation()">
+<h3 class="c">username :</h3><input type="username" class="i" placeholder="Enter your username" name="username" ></input><p></p>
+<h3 class="c">password : </h3><input type="password" class="i" placeholder="Enter password" name="password"></input><p></p>
+<input type="submit" name="login" value="login" id="l" onmouseout="effectback()" onmouseover="effect()"></input>
+<a href="newuser.html">new user? register here</a>
+
+</form>
+</div>
+</body>
+</html> 
